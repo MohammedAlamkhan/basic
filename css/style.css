@@ -1,0 +1,275 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #dacc98;
+    font-family:   Arial, sans-serif;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-right: 5rem;
+    width: 3rem;
+    display: flex;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem;
+  }
+  
+  nav ul li a.active {
+    background-color: #555;
+  }
+  
+  main {
+    padding: 2rem;
+  }
+
+
+  #carousel {
+    margin: 0 auto;
+    height: 400px;
+    width: 100%;
+    border: 1px solid black;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .culi {
+    display: inline-block;
+    height: 400px;
+    width: 400px;
+    list-style: none;
+    float: left;
+  }
+  
+  .cul {
+    margin: 0 auto;
+    padding: 0;
+    width: 2000px;
+    position: absolute;
+  }
+  
+  img {
+    height: 400px;
+    width: 400px;
+    display: block;
+  }
+  
+  [class*="carousel-button"] {
+    position: absolute;
+    transform: translate(0, -50%);
+    height: 30px;
+    width: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  
+  .carousel-button-slide-left {
+    left: 0;
+    top: 50%;
+    z-index: 2;
+  }
+  
+  .carousel-button-slide-left:hover span {
+    color: grey;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  
+  .carousel-button-slide-left span {
+    color: white;
+    top: 50%;
+    transform: translate(0, -50%);
+    position: absolute;
+    transition: 0.5s;
+    font-size: 30px;
+  }
+  
+  .carousel-button-slide-left span:hover {
+    color: grey;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  
+  .carousel-button-slide-right {
+    right: 0;
+    top: 50%;
+  }
+  
+  .carousel-button-slide-right:hover span {
+    color: grey;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  
+  .carousel-button-slide-right span {
+    color: white;
+    top: 50%;
+    transform: translate(0, -50%);
+    position: absolute;
+    transition: 0.5s;
+    font-size: 30px;
+    right: 0;
+  }
+  
+  .carousel-button-slide-right span:hover {
+    color: grey;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  
+  .carousel-controls {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    text-align: center;
+    width: 20%;
+    left: 40%;
+  }
+  
+  .dot {
+    background-color: #ccd4e2;
+    width: 8px;
+    height: 8px;
+    border: 1px solid #ccd4e2;
+    display: inline-block;
+    margin-left: 3px;
+    margin-right: 3px;
+  }
+  
+  .active {
+    background-color: #293df2;
+    border-color: #293df2;
+    display: inline-block;
+  }
+  
+  .inactive {
+    background-color: #ccd4e2;
+    border: 1px solid #ccd4e2;
+    display: inline-block;
+  }
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+
+
+.container {
+  max-width: 800px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.card-container {
+  perspective: 1000px;
+}
+
+.card {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 2rem;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.quote {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.quote cite {
+  font-style: normal;
+  font-weight: 700;
+  margin-top: 1rem;
+  display: block;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+.gallery {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.gallery-container img {
+  max-width: 100%;
+  height: auto;
+  display: none;
+}
+
+.gallery-container img.active {
+  display: block;
+}
+
+.controls {
+  margin-top: 20px;
+}
+
+.controls button {
+  padding: 10px 20px;
+  font-size: 16px;
+}

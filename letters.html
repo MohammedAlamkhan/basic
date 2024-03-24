@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="paintings.html">Paintings</a></li>
+        <li><a href="letters.html" class="active">Quotes</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Quotes</h1>
+    <div class="container">
+      <div class="card-container">
+        <div class="card">
+          <blockquote class="quote">
+            <p id="quote-text"></p>
+            <cite id="quote-author"></cite>
+          </blockquote>
+        </div>
+      </div>
+      <div class="controls">
+        <button id="prev-quote">Previous</button>
+        <button id="next-quote">Next</button>
+      </div>
+    </div>
+  </main>
+  <script src="js/quotesScript.js"></script>
+</body>
+</html>
